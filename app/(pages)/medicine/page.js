@@ -1,5 +1,5 @@
-export default function pharmacy(){
+export default function medicine(){
     return(
-        <div>pharmacy</div>
+        <div>medicine</div>
     )
 }

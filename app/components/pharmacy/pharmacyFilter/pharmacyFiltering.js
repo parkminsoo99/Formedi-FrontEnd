@@ -1,9 +1,9 @@
 'use client'
 import {Checkbox} from 'antd';
-import PharmacyFilterSearch from '../../pharmacySearch/pharmacySearch';
+import PharmacyFilterSearch from '../pharmacySearch/pharmacySearch';
 const CheckboxGroup = Checkbox.Group;
 const plainOptions = ['English', 'Chinese', 'Japanese'];
-import useFilteringStore from "../../../containers/pharmacyFiltering/pharmacyFilterlingStore";
+import useFilteringStore from "../../../containers/pharmacyStore/pharmacyFiltering/pharmacyFilterlingStore";
 export default function pharmacyFiltering() {
     const [checkedList, setCheckedList] = useFilteringStore(state => [state.checkedList, state.setCheckedList]); 
     const onChange = (list) => {

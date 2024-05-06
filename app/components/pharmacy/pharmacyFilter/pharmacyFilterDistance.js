@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import useFilteringStore from "../../../containers/pharmacyFiltering/pharmacyFilterlingStore";
+import useFilteringStore from "../../../containers/pharmacyStore/pharmacyFiltering/pharmacyFilterlingStore";
 
 export default function pharmacyFilterDistance() {
 

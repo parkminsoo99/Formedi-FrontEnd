@@ -1,6 +1,6 @@
 
 import {CiSearch} from "react-icons/ci";
-import {useSearchKeyword} from "@/app/containers/pharmacySearch/pharmacySearchStore";
+import {useSearchKeyword} from "@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore";
 export default function pharmacySearch() {
     const { keyword, setKeyword } = useSearchKeyword((state) => state)
     return (<> < div className = "w-[300px] h-[38px] justify-start relative items-start inline-flex" > <div

@@ -1,0 +1,40 @@
+.myContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backgroundBox {
+    width: 100%;
+    height: 195px;
+    background: linear-gradient(
+        235deg,
+        rgba(255, 235, 178, 0.15) 0.47%,
+        rgba(255, 205, 59, 0.15) 50.5%,
+        rgba(255, 190, 2, 0.15) 99.55%
+      ),
+      linear-gradient(
+        302deg,
+        rgba(105, 188, 46, 0.80) -0.87%,
+        rgba(162, 221, 117, 0.80) 19.67%,
+        rgba(255, 255, 255, 0.80) 101.81%,
+        rgba(216, 241, 196, 0.80) 101.82%
+      );
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerBox {
+    width: 1095px;
+    height: 128px;
+    margin-top: 67px;
+    border-radius: 30px 30px 0px 0px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+    color: #A2DD75;
+}

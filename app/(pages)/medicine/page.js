@@ -4,6 +4,8 @@ import axios from 'axios';
 import styles from './medicine.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Modal from '@/app/components/Modal/medicineModal'; // 모달 컴포넌트 import
+import useMedicineModal from '@/app/hooks/useMedicineModal'; // 모달 관련 hook import
 
 export default function Medicine() {
     const [medicines, setMedicines] = useState([]);
@@ -22,10 +24,17 @@ export default function Medicine() {
             });
     }, []); // 빈 배열을 전달하여 컴포넌트가 처음 렌더링될 때 한 번만 호출
 
+    // 모달 상태 및 토글 함수
+    // const { isShowing, toggle } = useMedicineModal();
+    const { isShowing, toggle, selectedMedicineId } = useMedicineModal(); // selectedMedicineId 추가
+    useEffect(() => {
+        console.log("isShowing:", isShowing);
+    }, [isShowing]);
+
     return (
         <div className={styles.medicineContainer}>
             <div style={{ position: 'relative', width: '1300px', height: '633px' }}>
-            <Image src="/images/medicine.png" alt="Medicine Image" width={1300} height={633} style={{ marginTop: '44px' }}/>
+            <Image src="/imgs/medicine.png" alt="Medicine Image" width={1300} height={633} style={{ marginTop: '44px' }}/>
             <div style={{ position: 'absolute', top: '245px', left: '692px', color: '#FFF', fontSize: '48px', fontWeight: 700 }}>
                 Are you worried because<br/>the pharmacy is closed?
             </div>
@@ -58,13 +67,18 @@ export default function Medicine() {
                         <Image src={medicine.medicine_image} alt="Medicine" width={340} height={240} style={{ borderRadius: '12px' }}/>
                         <div className={styles.medicineDetail}>
                             <p className={styles.medicineText}>{medicine.medicine_name_en}</p>
-                            <Link href={`/medicine/${medicine.medicine_id}`}>
-                            <button className={styles.moreDetailButton}>More Detail</button>
-                            </Link>
+                            <button
+                                className={styles.moreDetailButton}
+                                onClick={() => toggle(medicine.medicine_id)}
+                            >
+                                More Detail
+                            </button>
                         </div>
                     </div>
                 ))}
             </div>
+            {/* 모달 컴포넌트 */}
+            <Modal isShowing={isShowing} hide={toggle} medicineId={selectedMedicineId} />
         </div>
     );
 }

@@ -7,10 +7,10 @@ export default function Home() {
     <div className={styles.mainContainer}>
       <div className={styles.contentContainer}>
         <div className={styles.container}>
-          <div className={styles.content}>
+          {/* <div className={styles.content}>
             ForMedi
-          </div>
-          <Image src="/images/none.png" alt="Example Image" width={250} height={250} style={{ marginTop: '22px' }}/>
+          </div> */}
+          <Image src="/imgs/main_logo.png" alt="Logo Image" width={760} height={165} style={{ marginBottom: '40px' }}/>
           <div className={styles.secondContent}>
             Easy to find foreign language-speaking<br/>medical institutions in Seoul!
           </div>
@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.descriptionItem}>
-            <Image src="/images/main_example.png" alt="How Image" width={400} height={232.23} />
+            <Image src="/imgs/main_search.png" alt="How Image" width={400} height={232.23} />
             <div className={styles.box}>
               #Search
             </div>
@@ -31,7 +31,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.descriptionItem}>
-            <Image src="/images/main_medicine.png" alt="How Image" width={400} height={232.23} unoptimized />
+            <Image src="/imgs/main_medicine.png" alt="How Image" width={400} height={232.23} unoptimized />
             <div className={styles.box}>
               #Medicine
             </div>
@@ -40,7 +40,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.descriptionItem}>
-            <Image src="/images/main_language.png" alt="How Image" width={400} height={232.23} />
+            <Image src="/imgs/main_language.png" alt="How Image" width={400} height={232.23} />
             <div className={styles.box}>
               #Language
             </div>

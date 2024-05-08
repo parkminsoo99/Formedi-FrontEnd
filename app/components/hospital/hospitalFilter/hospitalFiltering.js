@@ -5,7 +5,7 @@ import HospitalSearch from '../hospitalSearch/hospitalSearch';
 import FilteringStore from '../../../containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
 
 export default function pharmacyFiltering() {
-  const [setChecked] = FilteringStore((state) => [state.checked, state.setChecked]);
+  const [setChecked] = FilteringStore((state) => [state.setChecked]);
 
   const onChange = (e) => {
     setChecked([e.target.value]);

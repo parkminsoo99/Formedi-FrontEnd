@@ -1,7 +1,7 @@
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import { useState, useCallback } from 'react';
 
-export default function PharmacyMap({ realLat, realLng }) {
+export default function Map({ realLat, realLng }) {
   const validatedLat = parseFloat(realLat);
   const validatedLng = parseFloat(realLng);
   const [center] = useState({
@@ -24,20 +24,28 @@ export default function PharmacyMap({ realLat, realLng }) {
     googleMapsApiKey: process.env.GOOGLE_API_KEY,
   });
 
-  const onLoad = useCallback((loadedMap) => {
-    if (!isLoaded) return;
-    const bounds = new window.google.maps.LatLngBounds(center);
-    loadedMap.fitBounds(bounds);
-  }, [isLoaded, center]);
+  const onLoad = useCallback(
+    (loadedMap) => {
+      if (!isLoaded) return;
+      const bounds = new window.google.maps.LatLngBounds(center);
+      loadedMap.fitBounds(bounds);
+    },
+    [isLoaded, center],
+  );
 
-  const onUnmount = useCallback(() => {
-  }, []);
+  const onUnmount = useCallback(() => {}, []);
 
-  return (
-    isLoaded ? (
-      <GoogleMap mapContainerStyle={containerStyle} center={center} onLoad={onLoad} onUnmount={onUnmount} options={OPTIONS}>
-        <Marker position={center} />
-      </GoogleMap>
-    ) : <div>Loading Map...</div>
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+      options={OPTIONS}
+    >
+      <Marker position={center} />
+    </GoogleMap>
+  ) : (
+    <div>Loading Map...</div>
   );
 }

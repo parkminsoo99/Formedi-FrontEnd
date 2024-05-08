@@ -20,7 +20,8 @@
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": "off",
+    "import/extensions": "off",
     "no-useless-catch": "off"
   }
 }

@@ -6,7 +6,7 @@ import PharmacyPaginationStore from '@/app/containers/pharmacyStore/pharmacyPage
 import Store from '@/app/containers/pharmacyStore/pharmacy/pharmacyStore';
 import Pagination from '@/app/components/pharmacy/pharmacyPage/pharmacyPage';
 
-export default function pharmacy() {
+export default function Pharmacy() {
   const { pharmacy } = Store();
   const {
     currentPage,

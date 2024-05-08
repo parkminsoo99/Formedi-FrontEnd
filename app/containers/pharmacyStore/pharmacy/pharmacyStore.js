@@ -17,7 +17,6 @@ const Store = create((set) => ({
   },
   fetchPharmacyFilter: async (checkedList) => {
     try {
-      const plainOptions = ['English', 'Chinese', 'Japanese'];
       let langChinese = false;
       let langEnglish = false;
       let langJapanese = false;

@@ -3,28 +3,23 @@
 import './hospitalCardStyle.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Store from '@/app/containers/hospitalStore/hospital/hospitalStore.js';
-import HospitalName from '@/app/components/hospital/hospitalCard/hospitalName.js';
-import HospitalLanguage from '@/app/components/hospital/hospitalCard/hospitalLanguage.js';
-import { SearchKeyword } from '@/app/containers/hospitalStore/hospitalSearch/hospitalSearchStore.js';
-import FilteringStore from '@/app/containers/hospitalStore/hospitalFiltering/hospitalFilteringStore.js';
-import HospitalPaginationStore from '@/app/containers/hospitalStore/hospitalpageStore/hospitalPageStore.js';
+import Store from '@/app/containers/hospitalStore/hospital/hospitalStore';
+import HospitalName from './hospitalName';
+import HospitalLanguage from './hospitalLanguage';
+import { SearchKeyword } from '@/app/containers/hospitalStore/hospitalSearch/hospitalSearchStore';
+import FilteringStore from '@/app/containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
+import HospitalPaginationStore from '@/app/containers/hospitalStore/hospitalpageStore/hospitalPageStore';
 
 export default function HospitalCard() {
   const router = useRouter();
   const {
-    setLat,
-    setLng,
-    hospital,
-    fetchNationHospital,
-    fetchHospital,
-    fetchKeywordHospital,
+    setLat, setLng, hospital, fetchNationHospital, fetchHospital, fetchKeywordHospital,
   } = Store();
   const [keyword] = SearchKeyword((state) => [state.keyword]);
   const [checked] = FilteringStore((state) => [state.checked]);
-  const { currentItems } = HospitalPaginationStore(
-    (state) => ({ currentItems: state.currentItems(hospital) }),
-  );
+  const { currentItems } = HospitalPaginationStore((state) => ({
+    currentItems: state.currentItems(hospital),
+  }));
 
   useEffect(() => {
     if (keyword === '' && checked.length === 0) {
@@ -47,18 +42,23 @@ export default function HospitalCard() {
   return (
     <>
       {currentItems.map((item) => {
-        const filteredLanguages = Object.entries(item).reduce((acc, [, value]) => {
-          if (Array.isArray(value) && value.length > 0) {
-            return acc.concat(value);
-          }
-          return acc;
-        }, []);
+        const filteredLanguages = Object.entries(item).reduce(
+          (acc, [, value]) => acc.concat(Array.isArray(value) && value.length > 0 ? value : []),
+          [],
+        );
 
         return (
-          <div key={item.hospital_register_num} className="pharmacy-card p-3 rounded-[10px] border border-lime-100 shadow-lg">
+          <div
+            key={item.hospital_register_num}
+            className="pharmacy-card p-3 rounded-[10px] border border-lime-100 shadow-lg"
+          >
             <button
               type="button"
-              onClick={() => handleClick(item.hospital_register_num, item.hospital_latitude, item.hospital_longitude)}
+              onClick={() => handleClick(
+                item.hospital_register_num,
+                item.hospital_latitude,
+                item.hospital_longitude,
+              )}
             >
               <img
                 className="w-80 h-[230px] rounded-[10px] border border-lime-500"

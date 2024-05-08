@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Store from '@/app/containers/pharmacyStore/pharmacy/pharmacyStore.js';
 import PharmacyName from '@/app/components/pharmacy/pharmacyCard/pharmacyName.js';
 import PharmacyLanguage from '@/app/components/pharmacy/pharmacyCard/pharmacyLanguage.js';
-import PharmacySearch from '@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore.js';
+import { PharmacySearch } from '@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore.js';
 import FilteringStore from '@/app/containers/pharmacyStore/pharmacyFiltering/pharmacyFilterlingStore.js';
 import PharmacyPaginationStore from '@/app/containers/pharmacyStore/pharmacyPageStore/pharmacyPageStore.js';
 
@@ -20,7 +20,7 @@ export default function PharmacyCard() {
     fetchKeywordPharmacy,
   } = Store();
   const [checkedList] = FilteringStore((state) => [state.checkedList]);
-  const [keyword] = PharmacySearch((state) => [state.keyword]);
+  const { keyword } = PharmacySearch();
   const { currentItems } = PharmacyPaginationStore(
     (state) => ({ currentItems: state.currentItems(pharmacy) }),
   );
@@ -46,7 +46,7 @@ export default function PharmacyCard() {
 
   return (
     <>
-      {currentItems.map((item, index) => {
+      {currentItems.map((item) => {
         const filteredLanguages = Object.entries(item).reduce((acc, [key, value]) => {
           if (typeof value === 'boolean' && value) {
             acc.push(key);

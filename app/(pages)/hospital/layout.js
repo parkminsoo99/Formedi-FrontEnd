@@ -1,8 +1,8 @@
-export default function Layout(props) {
+export default function Layout({ modal, children }) {
   return (
     <>
-      {props.modal}
-      {props.children}
+      {modal}
+      {children}
     </>
   );
 }

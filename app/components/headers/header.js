@@ -28,7 +28,7 @@ export default function header({ activePage }) {
               <li>
                 <a
                   href="/"
-                  className={`{"${activePage == '/' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
+                  className={`{"${activePage === '/' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
                   aria-current="page"
                 >
                   home
@@ -37,7 +37,7 @@ export default function header({ activePage }) {
               <li>
                 <a
                   href="/pharmacy"
-                  className={`{"${activePage == '/pharmacy' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
+                  className={`{"${activePage === '/pharmacy' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
                 >
                   pharmacy
                 </a>
@@ -45,7 +45,7 @@ export default function header({ activePage }) {
               <li>
                 <a
                   href="/hospital"
-                  className={`{"${activePage == '/hospital' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
+                  className={`{"${activePage === '/hospital' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
                 >
                   hospital
                 </a>
@@ -53,7 +53,7 @@ export default function header({ activePage }) {
               <li>
                 <a
                   href="/medicine"
-                  className={`{"${activePage == '/medicine' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
+                  className={`{"${activePage === '/medicine' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
                 >
                   medicine
                 </a>
@@ -61,7 +61,7 @@ export default function header({ activePage }) {
               <li>
                 <a
                   href="/mypage"
-                  className={`{"${activePage == '/medicine' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
+                  className={`{"${activePage === '/medicine' ? 'lg:p-0 dark:text-white' : 'lg:p-0 dark:text-lime-400'} block py-2 pr-4 pl-3 lg:bg-transparent  lg:dark:hover:text-white active:bg-primary-700 active:text-white}`}
                 >
                   mypage
                 </a>

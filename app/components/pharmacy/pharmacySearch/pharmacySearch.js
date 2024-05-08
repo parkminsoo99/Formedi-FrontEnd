@@ -1,8 +1,8 @@
 import { CiSearch } from 'react-icons/ci';
-import PharmacySearch from '@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore';
+import { PharmacySearch } from '@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore';
 
 export default function pharmacySearch() {
-  const { keyword, setKeyword } = PharmacySearch((state) => [state.keyword, state.setKeyword]);
+  const { keyword, setKeyword } = PharmacySearch();
   return (
     <>
       {' '}

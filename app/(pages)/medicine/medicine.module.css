@@ -1,0 +1,110 @@
+.medicineContainer {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.10) 0%,
+        rgba(255, 205, 59, 0.10) 50%,
+        rgba(255, 190, 2, 0.10) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.70) 0%,
+        rgba(216, 241, 196, 0.70) 59%,
+        rgba(162, 221, 117, 0.70) 100%
+      );
+}
+
+.searchAndTabsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchContainer {
+    margin-top: 90px;
+}
+
+.searchInput {
+    width: 262px;
+    height: 38px;
+    border-radius: 7px;
+    background: #FFF;
+    box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.50);
+    border: none;
+    padding: 0 15px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.searchInput::placeholder {
+    color: #B5B7C0;
+}
+
+.tabContainer {
+    display: flex;
+    margin-left: 42px;
+    margin-top: 90px;
+}
+
+.tab {
+    display: flex;
+    height: 40px;
+    padding: 0 24px;
+    align-items: center;
+    background-color: #ffffff;
+    color: #69BC2E;
+    cursor: pointer;
+}
+
+.tab.selected {
+    background-color: #69BC2E;
+    color: #ffffff;
+}
+
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.listItemContainer {
+    height: 310px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 30px 50px;
+    padding: 10px;
+}
+
+.medicineDetail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #69BC2E;
+    font-size: 16px;
+    font-weight: 600;
+    width: 340px;
+    overflow-wrap: break-word;
+}
+
+.medicineText {
+    flex: 1;
+}
+
+.moreDetailButton {
+    width: 132px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #A2DD75;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 10px;
+}

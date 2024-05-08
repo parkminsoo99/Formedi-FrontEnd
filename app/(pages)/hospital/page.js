@@ -1,10 +1,9 @@
 'use client';
-
-import HospitalCard from '@/app/components/hospital/hospitalCard/hospitalCard.js';
-import HospitalFilering from '@/app/components/hospital/hospitalFilter/hospitalFiltering.js';
-import HospitalPaginationStore from '@/app/containers/hospitalStore/hospitalpageStore/hospitalPageStore.js';
-import Store from '@/app/containers/hospitalStore/hospital/hospitalStore.js';
-import Pagination from '@/app/components/hospital/hospitalPage/hospitalPage.js';
+import HospitalCard from '../../components/hospital/hospitalCard/hospitalCard';
+import HospitalFilering from '../../components/hospital/hospitalFilter/hospitalFiltering';
+import HospitalPaginationStore from '../../containers/hospitalStore/hospitalpageStore/hospitalPageStore';
+import Store from '../../containers/hospitalStore/hospital/hospitalStore';
+import Pagination from '../../components/hospital/hospitalPage/hospitalPage';
 
 export default function Hospital() {
   const { hospital } = Store();

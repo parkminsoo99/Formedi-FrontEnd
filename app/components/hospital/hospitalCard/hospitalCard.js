@@ -3,19 +3,19 @@
 import './hospitalCardStyle.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Store from '@/app/containers/hospitalStore/hospital/hospitalStore';
+import Store from '../../../containers/hospitalStore/hospital/hospitalStore';
 import HospitalName from './hospitalName';
 import HospitalLanguage from './hospitalLanguage';
-import { SearchKeyword } from '@/app/containers/hospitalStore/hospitalSearch/hospitalSearchStore';
-import FilteringStore from '@/app/containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
-import HospitalPaginationStore from '@/app/containers/hospitalStore/hospitalpageStore/hospitalPageStore';
+import SearchKeyword from '../../../containers/hospitalStore/hospitalSearch/hospitalSearchStore';
+import FilteringStore from '../../../containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
+import HospitalPaginationStore from '../../../containers/hospitalStore/hospitalpageStore/hospitalPageStore';
 
 export default function HospitalCard() {
   const router = useRouter();
   const {
     setLat, setLng, hospital, fetchNationHospital, fetchHospital, fetchKeywordHospital,
   } = Store();
-  const [keyword] = SearchKeyword((state) => [state.keyword]);
+  const {keyword} = SearchKeyword();
   const [checked] = FilteringStore((state) => [state.checked]);
   const { currentItems } = HospitalPaginationStore((state) => ({
     currentItems: state.currentItems(hospital),

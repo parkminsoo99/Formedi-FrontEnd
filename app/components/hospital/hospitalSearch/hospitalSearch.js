@@ -1,10 +1,10 @@
 'use client';
 
 import { CiSearch } from 'react-icons/ci';
-import { SearchKeyword } from '@/app/containers/hospitalStore/hospitalSearch/hospitalSearchStore';
+import SearchKeyword from '../../../containers/hospitalStore/hospitalSearch/hospitalSearchStore';
 
 export default function HospitalSearch() {
-  const { keyword, setKeyword } = SearchKeyword((state) => state);
+  const { keyword, setKeyword } = SearchKeyword();
 
   return (
     <div className="w-[300px] flex-col justify-start gap-[30px] inline-flex">

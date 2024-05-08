@@ -4,6 +4,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
   return (
     <div className="flex justify-center items-center mt-4">
       <button
+        type="button"
         disabled={currentPage === 1}
         onClick={() => onPageChange(currentPage - 1)}
         className={`px-4 py-2 rounded-md transition-colors duration-300 ${
@@ -15,12 +16,10 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         이전
       </button>
       <span className="mx-4 text-gray-500">
-        {currentPage}
-        {' '}
-        /
-        {totalPages}
+        {currentPage} / {totalPages}
       </span>
       <button
+        type="button"
         disabled={currentPage === totalPages}
         onClick={() => onPageChange(currentPage + 1)}
         className={`px-4 py-2 rounded-md transition-colors duration-300 ${

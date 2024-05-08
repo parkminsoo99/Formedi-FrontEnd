@@ -3,12 +3,12 @@
 import './pharmacyCardStyle.css';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Store from '@/app/containers/pharmacyStore/pharmacy/pharmacyStore.js';
-import PharmacyName from '@/app/components/pharmacy/pharmacyCard/pharmacyName.js';
-import PharmacyLanguage from '@/app/components/pharmacy/pharmacyCard/pharmacyLanguage.js';
-import { PharmacySearch } from '@/app/containers/pharmacyStore/pharmacySearch/pharmacySearchStore.js';
-import FilteringStore from '@/app/containers/pharmacyStore/pharmacyFiltering/pharmacyFilterlingStore.js';
-import PharmacyPaginationStore from '@/app/containers/pharmacyStore/pharmacyPageStore/pharmacyPageStore.js';
+import Store from '../../../containers/pharmacyStore/pharmacy/pharmacyStore.js';
+import PharmacyName from '../../../components/pharmacy/pharmacyCard/pharmacyName.js';
+import PharmacyLanguage from '../../../components/pharmacy/pharmacyCard/pharmacyLanguage.js';
+import PharmacySearch from '../../../containers/pharmacyStore/pharmacySearch/pharmacySearchStore.js';
+import FilteringStore from '../../../containers/pharmacyStore/pharmacyFiltering/pharmacyFilterlingStore.js';
+import PharmacyPaginationStore from '../../../containers/pharmacyStore/pharmacyPageStore/pharmacyPageStore.js';
 
 export default function PharmacyCard() {
   const {

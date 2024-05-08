@@ -1,10 +1,9 @@
 'use client';
-
 import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
-import GoogleMap from '@/app/hooks/useGoogleMap.js';
-import Modal from '@/app/hooks/useModal.js';
-import Store from '@/app/containers/hospitalStore/hospital/hospitalStore.js';
+import GoogleMap from '../../../../../hooks/useGoogleMap';
+import Modal from '../../../../../hooks/useModal';
+import Store from '../../../../../containers/hospitalStore/hospital/hospitalStore';
 
 export default function ModalPage() {
   const { lat, lng } = Store();

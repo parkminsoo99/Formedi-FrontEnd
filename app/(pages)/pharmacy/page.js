@@ -1,10 +1,10 @@
 'use client';
 
-import PharmacyCard from '@/app/components/pharmacy/pharmacyCard/pharmacyCard';
-import PharmacyFiltering from '@/app/components/pharmacy/pharmacyFilter/pharmacyFiltering';
-import PharmacyPaginationStore from '@/app/containers/pharmacyStore/pharmacyPageStore/pharmacyPageStore';
-import Store from '@/app/containers/pharmacyStore/pharmacy/pharmacyStore';
-import Pagination from '@/app/components/pharmacy/pharmacyPage/pharmacyPage';
+import PharmacyCard from '../../components/pharmacy/pharmacyCard/pharmacyCard';
+import PharmacyFiltering from '../../components/pharmacy/pharmacyFilter/pharmacyFiltering';
+import PharmacyPaginationStore from '../../containers/pharmacyStore/pharmacyPageStore/pharmacyPageStore';
+import Store from '../../containers/pharmacyStore/pharmacy/pharmacyStore';
+import Pagination from '../../components/pharmacy/pharmacyPage/pharmacyPage';
 
 export default function Pharmacy() {
   const { pharmacy } = Store();

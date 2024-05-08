@@ -2,9 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
-import GoogleMap from '@/app/hooks/useGoogleMap.js';
-import Modal from '@/app/hooks/useModal.js';
-import Store from '@/app/containers/pharmacyStore/pharmacy/pharmacyStore.js';
+import GoogleMap from '../../../../../hooks/useGoogleMap';
+import Modal from '../../../../../hooks/useModal.js';
+import Store from '../../../../../containers/pharmacyStore/pharmacy/pharmacyStore.js';
 
 export default function ModalPage() {
   const { lat, lng } = Store();

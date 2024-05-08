@@ -16,7 +16,10 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
         이전
       </button>
       <span className="mx-4 text-gray-500">
-        {currentPage} / {totalPages}
+        {currentPage}
+        {' '}
+        /
+        {totalPages}
       </span>
       <button
         type="button"

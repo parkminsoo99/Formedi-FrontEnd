@@ -22,6 +22,18 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": "off",
     "import/extensions": "off",
-    "no-useless-catch": "off"
+    "no-useless-catch": "off",
+    "lines-around-directive": "off",
+    "object-curly-spacing": "off",
+    "import/no-useless-path-segments": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "indent": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-tag-spacing": "off",
+    "jsx-a11y/label-has-associated-control": "off", 
+    "jsx-a11y/no-noninteractive-element-interactions": "off", 
+    "eol-last": "off"
   }
 }

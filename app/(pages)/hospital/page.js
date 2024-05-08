@@ -1,4 +1,5 @@
 'use client';
+
 import HospitalCard from '../../components/hospital/hospitalCard/hospitalCard';
 import HospitalFilering from '../../components/hospital/hospitalFilter/hospitalFiltering';
 import HospitalPaginationStore from '../../containers/hospitalStore/hospitalpageStore/hospitalPageStore';

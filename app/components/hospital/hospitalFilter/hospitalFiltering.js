@@ -1,7 +1,7 @@
 'use client';
 
 import { Radio } from 'antd';
-import HospitalSearch from '../../../components/hospital/hospitalSearch/hospitalSearch';
+import HospitalSearch from '../hospitalSearch/hospitalSearch';
 import FilteringStore from '../../../containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
 
 export default function pharmacyFiltering() {

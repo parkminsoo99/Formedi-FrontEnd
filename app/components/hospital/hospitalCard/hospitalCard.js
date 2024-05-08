@@ -15,7 +15,7 @@ export default function HospitalCard() {
   const {
     setLat, setLng, hospital, fetchNationHospital, fetchHospital, fetchKeywordHospital,
   } = Store();
-  const {keyword} = SearchKeyword();
+  const { keyword } = SearchKeyword();
   const [checked] = FilteringStore((state) => [state.checked]);
   const { currentItems } = HospitalPaginationStore((state) => ({
     currentItems: state.currentItems(hospital),

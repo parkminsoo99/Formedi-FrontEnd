@@ -1,6 +1,7 @@
-import { create } from 'zustand'
+import { create } from 'zustand';
 
-export const useSearchKeyword = create((set) => ({
+const PharmacySearch = create((set) => ({
   keyword: '',
   setKeyword: (value) => set({ keyword: value }),
-}))
+}));
+export default PharmacySearch;

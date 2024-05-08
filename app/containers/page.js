@@ -1,5 +1,5 @@
-export default function container(){
-    return(
-        <div>container</div>
-    )
+export default function container() {
+  return (
+    <div>container</div>
+  );
 }

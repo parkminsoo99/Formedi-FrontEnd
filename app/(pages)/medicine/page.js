@@ -1,5 +1,5 @@
-export default function medicine(){
-    return(
-        <div>medicine</div>
-    )
+export default function medicine() {
+  return (
+    <div>medicine</div>
+  );
 }

@@ -1,8 +1,8 @@
-import {create} from 'zustand';
+import { create } from 'zustand';
 
-const useFilteringStore = create(set => ({
-    checkedList : '',
-    setCheckedList : (value) => set({checkedList: value}),
-}))
+const FilteringStore = create((set) => ({
+  checkedList: '',
+  setCheckedList: (value) => set({ checkedList: value }),
+}));
 
-export default useFilteringStore;
+export default FilteringStore;

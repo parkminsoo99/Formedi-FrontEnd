@@ -1,5 +1,5 @@
-export default function hook(){
-    return(
-        <div>hook</div>
-    )
+export default function hook() {
+  return (
+    <div>hook</div>
+  );
 }

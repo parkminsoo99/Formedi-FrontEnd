@@ -1,10 +1,11 @@
-'use client'
+'use client';
+
 import { Radio } from 'antd';
-import HospitalSearch from "@/app/components/hospital/hospitalSearch/hospitalSearch";
-import useFilteringStore from "@/app/containers/hospitalStore/hospitalFiltering/hospitalFilteringStore";
+import HospitalSearch from '@/app/components/hospital/hospitalSearch/hospitalSearch';
+import FilteringStore from '@/app/containers/hospitalStore/hospitalFiltering/hospitalFilteringStore';
 
 export default function pharmacyFiltering() {
-  const [checked, setChecked] = useFilteringStore(state => [state.checked, state.setChecked]);
+  const [checked, setChecked] = FilteringStore((state) => [state.checked, state.setChecked]);
 
   const onChange = (e) => {
     setChecked([e.target.value]);
@@ -30,5 +31,5 @@ export default function pharmacyFiltering() {
         </div>
       </div>
     </div>
-  )
+  );
 }

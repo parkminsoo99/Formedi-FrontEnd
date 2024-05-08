@@ -1,5 +1,5 @@
-export default function component(){
-    return(
-        <div>component</div>
-    )
+export default function component() {
+  return (
+    <div>component</div>
+  );
 }

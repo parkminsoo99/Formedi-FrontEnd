@@ -1,5 +1,6 @@
 'use client';
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+
+function Pagination({ currentPage, totalPages, onPageChange }) {
   return (
     <div className="flex justify-center items-center mt-4">
       <button
@@ -14,7 +15,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         이전
       </button>
       <span className="mx-4 text-gray-500">
-        {currentPage} / {totalPages}
+        {currentPage}
+        {' '}
+        /
+        {totalPages}
       </span>
       <button
         disabled={currentPage === totalPages}
@@ -29,6 +33,6 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       </button>
     </div>
   );
-};
+}
 
 export default Pagination;

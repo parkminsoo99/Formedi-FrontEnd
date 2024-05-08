@@ -1,7 +1,7 @@
-'use client'
-import { useSearchParams } from 'next/navigation'
+'use client';
+
 export default function modalPage() {
   return (
-      <div>REAL-111</div>
+    <div>REAL-111</div>
   );
-};
+}

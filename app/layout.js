@@ -3,7 +3,8 @@
 import { Inter } from 'next/font/google';
 import { usePathname } from 'next/navigation';
 import Header from './components/headers/header';
-import "./styles/globals.css";
+import './styles/globals.css';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {

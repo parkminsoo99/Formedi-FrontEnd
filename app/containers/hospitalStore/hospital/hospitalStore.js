@@ -1,11 +1,18 @@
 import {create} from 'zustand'
 import axios from 'axios';
-
+axios.defaults.withCredentials = true;
 const useStore = create(set => ({
+    lat : '',
+    setLat : (value) => set({lat:value}),
+    lng : '',
+    setLng : (value) => set({lng:value}),
     hospital: [],
     fetchHospital: async () => {
     try {
-        const response = await axios.get('http://localhost:9999/pharmacy_real');
+        const response = await axios({
+            url: '/hospitals',
+            method: 'GET', 
+        })
         set({ hospital: response.data });
         } catch (error) {
         console.error("Failed to fetch data:", error);
@@ -13,9 +20,15 @@ const useStore = create(set => ({
     },
     fetchKeywordHospital: async (keyword) => {
         try {
-            console.log("fetchKeywordPharmacy",keyword)
-            // const response = await axios.get('http://localhost:9999/pharmacy_real');
-            const response = await axios.get(`http://localhost:9999/pharmacy_real?keyword=${keyword}`);
+            const response = await axios.get(`/hospitals/search?keyword=${keyword}`);
+            set({ hospital: response.data });
+            } catch (error) {
+            console.error("Failed to fetch data:", error);
+            }
+        },
+    fetchNationHospital: async (nation) => {
+        try {
+            const response = await axios.get(`/hospitals/nation/${nation}`);
             set({ hospital: response.data });
             } catch (error) {
             console.error("Failed to fetch data:", error);

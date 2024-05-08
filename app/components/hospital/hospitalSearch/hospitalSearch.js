@@ -4,7 +4,7 @@ import {useSearchKeyword} from "@/app/containers/hospitalStore/hospitalSearch/ho
 export default function HospitalSearch() {
     const {keyword, setKeyword} = useSearchKeyword((state) => state)
     return (
-        <div className="ml-10 w-[300px] flex-col justify-start gap-[30px] inline-flex">
+        <div className="w-[300px] flex-col justify-start gap-[30px] inline-flex">
             < div className="w-[300px] h-[38px] justify-start relative items-start inline-flex">
                 <div
                     className="w-[300px] h-[38px] left-0 top-1/2 relative bg-white rounded-[15px] shadow">

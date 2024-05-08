@@ -4,11 +4,10 @@ import GoogleMap from '@/app/hooks/useGoogleMap';
 import Modal from "@/app/hooks/useModal";
 import {useRouter} from "next/navigation";
 import {useCallback} from 'react';
+import useStore from "@/app/containers/hospitalStore/hospital/hospitalStore"
 export default function modalPage() {
-    const searchParams = useSearchParams();
+    const {lat,lng} = useStore()
     const router = useRouter();
-    const lat = searchParams.get('lat');
-    const lng = searchParams.get('lng');
     const onDismiss = useCallback(() => {
         router.back();
     }, [router]);
@@ -17,7 +16,7 @@ export default function modalPage() {
             <div
                 className="items-center justify-center flex-col flex bg-white p-4 w-[500px] h-[480px]">
                 <div className="w-[450px] h-[400px] flex items-center justify-center bg-black-500 mb-6">
-                    {/* <GoogleMap realLat={lat} realLng={lng} /> */}
+                    <GoogleMap realLat={lat} realLng={lng} />
                 </div>
                 <button
                     onClick={onDismiss}

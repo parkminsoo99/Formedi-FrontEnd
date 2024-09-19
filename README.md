@@ -21,7 +21,7 @@
 두통약이나 감기약 등을 쉽게 찾을 수 있도록 하며, 언제 어디서나 접근할 수 있는 편의점의 장점을
 활용하여 의료 접근성을 증가시킵니다.
 
-#아키텍처
+# 서비스 아키텍처
 <img width="721" alt="스크린샷 2024-09-07 오후 2 52 31" src="https://github.com/user-attachments/assets/c0e0f832-9be4-4497-a48a-306eeb238e43">
 <img width="1218" alt="스크린샷 2024-09-04 오후 9 52 09" src="https://github.com/user-attachments/assets/333ffe72-3a2b-4d42-8f02-5fc0a0547193">
 <img width="501" alt="스크린샷 2024-09-04 오후 9 51 42" src="https://github.com/user-attachments/assets/2d366657-b370-4e20-917d-7c25ada651fa">
